@@ -18,16 +18,22 @@ if __name__ == '__main__':
     perceptron_4 = BasicNeuron(inputs=[perceptron_1, perceptron_2, perceptron_3],
                                activation_function=ActivationFunction.SIGMOID)
 
-    print(perceptron_4(input_data=input_data))
+    print(f'Size of top perceptron (= amount of weights): {perceptron_4.size}.')
+    print('Output of top perceptron with given input data:')
+    print(perceptron_4(input_data=input_data), end='\n\n')
 
     # Simple fully connected layers
 
     input_layer = InputLayer(size=4)
     fully_connected_layer_1 = FullyConnectedLayer(
-        input_layer=input_layer, activation_function=ActivationFunction.RELU, size=5
+        input_layer=input_layer, activation_function=ActivationFunction.RELU, size=3
     )
     fully_connected_layer_2 = FullyConnectedLayer(
         input_layer=fully_connected_layer_1, activation_function=ActivationFunction.RELU, size=5
     )
-    print(fully_connected_layer_2(input_data=input_data))
+
+    print(f'Size of top fully connected layer (= amount of neurons in this + lower layers): '
+          f'{fully_connected_layer_2.size}.')
+    print('Output of top layer with given input data:')
+    print(fully_connected_layer_2(input_data=input_data), end='\n\n')
 

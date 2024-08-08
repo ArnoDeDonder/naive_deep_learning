@@ -65,7 +65,7 @@ class FullyConnectedLayer(AbstractLayer):
 
     @property
     def size(self) -> Tuple[int, ...]:
-        return (len(self.neurons),) + self._neurons[0].size
+        return (len(self.neurons),) + self._input_layer.size
 
     @property
     def input(self) -> AbstractLayer:
