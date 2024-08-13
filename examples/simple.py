@@ -1,8 +1,8 @@
 import numpy as np
 
-from activation_functions import ActivationFunction
-from neuron import BasicNeuron
-from layers import InputLayer, FullyConnectedLayer
+from nn.activation_functions import ActivationFunction
+from nn.neurons import BasicNeuron
+from nn.layers import InputLayer, FullyConnectedLayer
 
 if __name__ == '__main__':
     input_data = np.array([[.11, .32, .22, .54],
@@ -36,4 +36,3 @@ if __name__ == '__main__':
           f'{fully_connected_layer_2.size}.')
     print('Output of top layer with given input data:')
     print(fully_connected_layer_2(input_data=input_data), end='\n\n')
-

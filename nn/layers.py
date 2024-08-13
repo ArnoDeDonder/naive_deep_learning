@@ -3,8 +3,8 @@ from typing import Callable, List, Tuple, Union
 
 import numpy as np
 
-from activation_functions import ActivationFunction
-from neuron import AbstractNeuron, InputNeuron, BasicNeuron
+from nn.activation_functions import ActivationFunction
+from nn.neurons import AbstractNeuron, InputNeuron, BasicNeuron
 
 
 class AbstractLayer(ABC):
